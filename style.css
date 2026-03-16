@@ -1,0 +1,285 @@
+html, body{
+height:100%;
+margin:0;
+overflow:hidden;
+
+background:url("img/bg.jpg") no-repeat center center fixed;
+background-size:cover;
+}
+
+body{
+cursor: crosshair;
+margin:0;
+background:url("img/bg2.jpg");
+background-position: 1.3ex;
+color:rgb(255, 255, 255); 
+font-family: 'Orbitron', sans-serif;
+}
+
+.center{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+background:black;
+color:rgb(255, 255, 255);
+border:1px solid rgb(255, 255, 255);
+cursor: -webkit-grabbing;
+}
+
+button:hover{
+background:rgb(255, 255, 255);
+color:black;
+}
+
+#loading{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+color:white;
+display:none;
+justify-content:center;
+align-items:center;
+font-size:40px;
+z-index:999;
+}
+
+.logo3d{
+position:fixed;
+top:10px;
+left:10px;
+width:120px;
+cursor: -webkit-grabbing;
+}
+
+.album-page,
+.merch-page{
+background:rgb(0, 0, 0);
+background-size:cover;
+background-position:center;
+}
+
+.albumImg{
+width:500px;
+filter:blur(20px);
+transition:0.3s;
+cursor: -webkit-grabbing;
+}
+
+.albumImg:hover{
+filter:blur(10px);
+}
+
+.merchCenter{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:100px;
+}
+
+.merchCenter img{
+width:600px;
+cursor:-webkit-grabbing;
+transition:0.3s;
+}
+
+.merchCenter img:hover{
+transform:scale(1.1);
+}
+
+.album-page{
+background:url("img/bg.jpg");
+background-size:cover;
+background-position:center;
+}
+.merch-page{
+background:url("img/bg3.jpg");
+background-size:cover;
+background-position:center;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px){
+.center{
+padding:20px;
+text-align:center;
+}
+
+h1{
+font-size:30px;
+}
+
+button{
+width:150px;
+font-size:16px;
+}
+
+.logo3d{
+width:50px;
+top:5px;
+left:5px;
+}
+
+.albumImg{
+width:200px;
+}
+
+.merchCenter{
+flex-direction:column;
+gap:40px;
+}
+
+.merchCenter img{
+width:180px;
+}
+}
+
+img{
+max-width:100%;
+}
+
+.center img{
+max-width:80%;
+}
+
+#loading{
+font-size:40px;
+}
+
+button{
+padding:15px 25px;
+}
+
+.socials{
+position:fixed;
+bottom:10px;
+left:10px;
+
+display:flex;
+gap:10px;
+
+z-index:1000;
+}
+
+.socials img{
+width:30px;
+cursor: -webkit-grabbing;
+transition:0.2s;
+}
+
+.socials img:hover{
+transform:scale(1.2);
+}
+
+@media (max-width:700px){
+.socials img{
+width:25px;
+}
+}
+
+.productPage{
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:60px;
+padding:90px;
+box-sizing:border-box;
+}
+
+.productImg{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.productImg img{
+max-width:900px;
+width:600px;
+height:600px;
+}
+
+.productInfo{
+flex:1;
+max-width:350px;
+}
+
+.productPage{
+display:flex;
+flex-direction:row;
+}
+
+@media (max-width:900px){
+.productPage{
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.productInfo{
+text-align:center;
+}
+}
+
+.buyBtn{
+margin-top:20px;
+width:100%;
+padding:14px;
+background:white;
+color:black;
+border:1px solid white;
+font-weight:bold;
+letter-spacing:1px;
+cursor:moz-grabbing;
+transition:0.2s;
+}
+
+.buyBtn:hover{
+background:transparent;
+color:white;
+}
+
+.topMenu{
+position:fixed;
+top:15px;
+right:20px;
+display:flex;
+gap:30px;
+font-size:14px;
+letter-spacing:2px;
+z-index:1000;
+}
+
+.topMenu a{
+color:white;
+text-decoration:none;
+cursor:pointer;
+}
+
+.topMenu a:hover{
+opacity:0.6;
+}
+
+.searchBar{
+position:fixed;
+top:50px;
+right:20px;
+display:none;
+}
+
+.searchBar input{
+padding:8px;
+background:black;
+color:white;
+border:1px solid white;
+}
