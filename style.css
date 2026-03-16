@@ -283,3 +283,105 @@ background:black;
 color:white;
 border:1px solid white;
 }
+
+@media (max-width:900px){
+
+/* MENU */
+
+.topMenu{
+
+right:10px;
+gap:15px;
+font-size:12px;
+
+}
+
+
+/* LOGO */
+
+.logo3d{
+
+width:60px;
+top:5px;
+left:5px;
+
+}
+
+
+/* CENTER PAGES */
+
+.center{
+
+padding:20px;
+text-align:center;
+
+}
+
+
+/* PRODUCT PAGE */
+
+.productPage{
+
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+gap:20px;
+
+height:auto;
+
+margin-top:80px;
+
+}
+
+
+/* IMAGEM PRODUTO */
+
+.productImg img{
+
+width:250px;
+max-width:90%;
+
+}
+
+
+/* INFO PRODUTO */
+
+.productInfo{
+
+max-width:90%;
+text-align:center;
+
+}
+
+
+/* BOTAO */
+
+.buyBtn{
+
+width:100%;
+
+}
+
+
+/* TAMANHOS */
+
+.sizes{
+
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+
+/* SEARCH BAR */
+
+.searchBar{
+
+right:10px;
+top:45px;
+
+}
+
+}
