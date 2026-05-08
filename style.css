@@ -10,7 +10,6 @@ font-family:Arial, sans-serif;
 }
 
 body{
-cursor: url("img/rato_seta.png"), pointer;
 margin:0;
 background:url("img/bg2.jpg");
 background-position: 1.3ex;
@@ -18,7 +17,7 @@ color:rgb(255, 255, 255);
 font-family: 'Orbitron', sans-serif;
 
 a, button, img{
-cursor: url("img/rato_link.png"), pointer;
+cursor: url("img/cursor_link.png"), pointer;
 }
 }
 
@@ -36,7 +35,7 @@ margin:10px;
 background:black;
 color:rgb(255, 255, 255);
 border:1px solid rgb(255, 255, 255);
-cursor:url("img/rato_link.png"), pointer;
+cursor:url("img/cursor_link.png"), pointer;
 }
 
 button:hover{
@@ -62,7 +61,14 @@ position:fixed;
 top:10px;
 left:10px;
 width:120px;
-cursor: url("img/rato_link.png"), pointer;
+cursor: url("img/cursor_link.png"), pointer;
+}
+
+.album-page,
+.merch-page{
+background:rgb(0, 0, 0);
+background-size:cover;
+background-position:center;
 }
 
 .album-page,
@@ -73,14 +79,17 @@ background-position:center;
 }
 
 .albumImg{
+flex-direction:column;
+justify-content:center;
+align-items:center;
 width:500px;
-filter:blur(20px);
+filter:blur(5px);
 transition:0.3s;
-cursor: url("img/rato_link.png"), pointer;
+cursor: url("img/cursor_link.png"), pointer;
 }
 
 .albumImg:hover{
-filter:blur(10px);
+filter:blur(0px);
 }
 
 .merchCenter{
@@ -93,7 +102,7 @@ gap:100px;
 
 .merchCenter img{
 width:600px;
-cursor: url("img/rato_link.png"), pointer;
+cursor: url("img/cursor_link.png"), pointer;
 transition:0.3s;
 }
 
@@ -102,14 +111,22 @@ transform:scale(1.1);
 }
 
 .album-page{
-background:url("img/bg.jpg");
+background:url("img/wallpaper\ 2.jpg");
 background-size:cover;
 background-position:center;
+align-items:center;
 }
 .merch-page{
 background:url("img/bg3.jpg");
 background-size:cover;
 background-position:center;
+}
+
+.miigui-page{
+background:url("img/wallpaper\ 2.jpg");
+background-size:cover;
+background-position:center;
+align-items:center;
 }
 
 /* MOBILE */
@@ -124,11 +141,6 @@ h1{
 font-size:30px;
 }
 
-button{
-width:150px;
-font-size:16px;
-}
-
 .logo3d{
 width:50px;
 top:5px;
@@ -136,7 +148,7 @@ left:5px;
 }
 
 .albumImg{
-width:200px;
+width:20px;
 }
 
 .merchCenter{
@@ -162,7 +174,36 @@ font-size:40px;
 }
 
 button{
-padding:15px 25px;
+padding:13px 20px;
+font-size:15px;
+font-weight:bold;
+background:black;
+color:white;
+border:none;
+animation:pulse 1.5s infinite;
+box-shadow:
+0 0 10px grey,
+0 0 20px grey;
+}
+
+button:hover{
+transform:scale(1.08);
+background:white;
+color:black;
+box-shadow:
+0 0 20px grey,
+0 0 40px grey;
+}
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+100%{
+transform:scale(1);
+}
 }
 
 .socials{
@@ -178,7 +219,7 @@ z-index:1000;
 
 .socials img{
 width:30px;
-cursor: url(img/rato_link.png), pointer;
+cursor: url(img/cursor_link.png), pointer;
 transition:0.2s;
 }
 
@@ -237,22 +278,38 @@ text-align:center;
 }
 }
 
-.buyBtn{
-margin-top:20px;
-width:100%;
-padding:14px;
+/* ALBUM BTN */
+.albumBtn{
+padding:18px 40px;
+font-size:20px;
+font-weight:bold;
 background:white;
 color:black;
-border:1px solid white;
-font-weight:bold;
-letter-spacing:1px;
-cursor: url("img/rato_link.png"), pointer;
-transition:0.2s;
+border:none;
+animation:pulse 1.5s infinite;
+box-shadow:
+0 0 10px white,
+0 0 20px white;
 }
 
-.buyBtn:hover{
-background:transparent;
+.albumBtn:hover{
+transform:scale(1.08);
+background:black;
 color:white;
+box-shadow:
+0 0 20px white,
+0 0 40px white;
+}
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+100%{
+transform:scale(1);
+}
 }
 
 .topMenu{
@@ -269,7 +326,7 @@ z-index:1000;
 .topMenu a{
 color:white;
 text-decoration:none;
-cursor: url("img/rato_link.png"), pointer;
+cursor: url("img/cursor_link.png"), pointer;
 }
 
 .topMenu a:hover{
@@ -318,4 +375,149 @@ width:70px;
 
 *{
 box-sizing:border-box;
+}
+
+/* ========================= */
+/* INTRO OPiUM */
+/* ========================= */
+
+#introScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+z-index:999999;
+animation:introFade 4.5s forwards;
+}
+
+/* overlay noise */
+.introOverlay{
+position:absolute;
+width:100%;
+height:100%;
+
+background:
+url("https://grainy-gradients.vercel.app/noise.svg");
+opacity:0.08;
+pointer-events:none;
+}
+
+/* logo */
+.introLogo{
+width:min(220px, 50vw);
+z-index:2;
+animation:
+logoZoom 4s ease,
+logoFlicker 0.2s infinite;
+filter:
+brightness(1.2)
+contrast(1.3);
+}
+
+/* text */
+.introText{
+margin-top:20px;
+font-size:clamp(22px, 3vw, 40px);
+letter-spacing:12px;
+font-weight:900;
+color:grey;
+opacity:0;
+z-index:2;
+font-family:'Orbitron', sans-serif;
+animation:
+textAppear 2s forwards 1s,
+logoFlicker 0.15s infinite;
+}
+
+/* fade */
+@keyframes introFade{
+0%{
+opacity:1;
+}
+85%{
+opacity:1;
+}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* zoom */
+@keyframes logoZoom{
+0%{
+transform:scale(0.6);
+opacity:0;
+filter:blur(20px);
+}
+40%{
+opacity:1;
+}
+100%{
+transform:scale(1);
+filter:blur(0px);
+}
+}
+
+/* text */
+@keyframes textAppear{
+0%{
+opacity:0;
+letter-spacing:30px;
+}
+100%{
+opacity:1;
+letter-spacing:12px;
+}
+}
+
+/* glitch flicker */
+@keyframes logoFlicker{
+0%{
+opacity:1;
+}
+50%{
+opacity:0.92;
+}
+52%{
+opacity:0.4;
+}
+54%{
+opacity:1;
+}
+70%{
+opacity:0.95;
+}
+100%{
+opacity:1;
+}
+}
+
+/* MOBILE */
+@media (max-width:900px){
+.logo3d{
+width:55px;
+}
+
+.topMenu{
+gap:15px;
+font-size:12px;
+right:10px;
+}
+
+.introLogo{
+width:160px;
+}
+
+.introText{
+font-size:22px;
+letter-spacing:8px;
+}
 }
