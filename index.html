@@ -1,0 +1,140 @@
+<!-- ========================= -->
+<!-- index.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>003 PRO MUNDO</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- INTRO -->
+
+<div id="introScreen">
+
+    <div class="introOverlay"></div>
+
+    <img src="img/logo.gif" class="introLogo">
+
+    <h1 class="introText">
+
+        003 PRO MUNDO
+
+    </h1>
+
+</div>
+
+
+
+<!-- LOGO -->
+
+<img src="img/logo.gif"
+class="logo3d"
+onclick="goHome()">
+
+
+
+<!-- MENU -->
+
+<div class="topMenu">
+
+<a href="miigui.html">MIIGUI</a>
+
+<a href="trigueiroo.html">TRIGUEIROO</a>
+
+<a onclick="openSearch()">PROCURAR</a>
+
+</div>
+
+
+
+<!-- SEARCH -->
+
+<div class="searchBar" id="searchBar">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Procurar..."
+onkeydown="searchSite(event)"
+>
+
+</div>
+
+
+
+<!-- CENTER -->
+
+<div class="center">
+
+<h1>003 PRO MUNDO</h1>
+
+<h2>OFFICIAL SITE</h2>
+
+
+<button
+class="albumBtn"
+onclick="goPage('album.html')">
+
+ALBUM
+
+</button>
+
+
+<button onclick="goPage('merch.html')">
+
+MERCH
+
+</button>
+
+</div>
+
+
+
+<!-- SOCIALS -->
+
+<div class="socials">
+
+<a href="https://www.youtube.com/" target="_blank">
+<img src="img/youtube.png">
+</a>
+
+<a href="https://open.spotify.com/" target="_blank">
+<img src="img/spotify.png">
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<img src="img/instagram.png">
+</a>
+
+</div>
+
+
+
+<!-- LOADING -->
+
+<div id="loading">
+
+LOADING...
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
