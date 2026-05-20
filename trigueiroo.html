@@ -1,59 +1,41 @@
 <!DOCTYPE html>
-<html>
-
-<title>TRIGUEIROO</title>
-
+<html lang="pt">
 <head>
-
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIGUEIROO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <img src="img/logo.gif" class="logo3d" onclick="goHome()">
 
-<img src="img/logo.gif" class="logo3d" onclick="goHome()">
+    <div class="topMenu">
+        <a href="miigui.html">MIIGUI</a>
+        <a href="trigueiroo.html">TRIGUEIROO</a>
+        <a onclick="openSearch()">PROCURAR</a>
+    </div>
 
-<div class="topMenu">
+    <div class="searchBar" id="searchBar">
+        <input type="text" id="searchInput" placeholder="Procurar..." onkeydown="searchSite(event)">
+    </div>
 
-<a href="miigui.html">MIIGUI</a>
+    <div class="center">
+        <div class="glass-panel">
+            <img src="img/trigueiroo.jpg" class="trigueirooImg" style="width:100%; max-width:350px; border-radius: 15px; margin-bottom: 15px;">
+            <h1>trigueiroo</h1>
+            <p>
+            <button onclick="goPage('index.html')">Nada Dísponivel</button>
+            <p>Nisa<p>
+            <div class="socials">
+                <a href="https://www.youtube.com/@trigueiroo" target="_blank"><img src="img/youtube.png"></a>
+                <a href="https://open.spotify.com/intl-pt/artist/2dRFE8wWnxQzVTEFTNBiFr?si=wVsZmPOfTK-PAMimCWgc6w" target="_blank"><img src="img/spotify.png"></a>
+                <a href="https://www.instagram.com/rodrigo_trigueiro__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="img/instagram.png"></a>
+            </div>
+        </div>
+    </div>
 
-<a href="trigueiroo.html">TRIGUEIROO</a>
-
-<a onclick="openSearch()">PROCURAR</a>
-
-</div>
-
-
-<div class="searchBar" id="searchBar">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Procurar..."
-onkeydown="searchSite(event)">
-</div>
-
-<div class="center">
-
-<img src="img/trigueiroo.jpg" class="trigueirooImg" width="350px" height="500px">
-
-<h1>TRIGUEIROO</h1>
-
-<p>NADA DISPONÍVEL</p>
-
-</div>
-
-
-<div id="loading">
-
-LOADING...
-
-</div>
-
-<script src="script.js"></script>
-
+    <div id="loading">LOADING...</div>
+    <script src="script.js"></script>
 </body>
 </html>
