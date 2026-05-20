@@ -1,523 +1,302 @@
-html, body{
-margin:0;
-padding:0;
-width:100%;
-min-height:100vh;
-background:url("img/bg.jpg") no-repeat center center fixed;
-background-size:cover;
-overflow-x:hidden;
-font-family:Arial, sans-serif;
-}
-
-body{
-margin:0;
-background:url("img/bg2.jpg");
-background-position: 1.3ex;
-color:rgb(255, 255, 255); 
-font-family: 'Orbitron', sans-serif;
-
-a, button, img{
-cursor: url("img/cursor_link.png"), pointer;
-}
-}
-
-.center{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-
-button{
-padding:10px 20px;
-margin:10px;
-background:black;
-color:rgb(255, 255, 255);
-border:1px solid rgb(255, 255, 255);
-cursor:url("img/cursor_link.png"), pointer;
-}
-
-button:hover{
-background:rgb(255, 255, 255);
-color:black;
-}
-
-#loading{
-position:fixed;
-width:100%;
-height:100vh;
-background:black;
-color:white;
-display:none;
-justify-content:center;
-align-items:center;
-font-size:40px;
-z-index:999;
-}
-
-.logo3d{
-position:fixed;
-top:10px;
-left:10px;
-width:120px;
-cursor: url("img/cursor_link.png"), pointer;
-}
-
-.album-page,
-.merch-page{
-background:rgb(0, 0, 0);
-background-size:cover;
-background-position:center;
-}
-
-.album-page,
-.merch-page{
-background:rgb(0, 0, 0);
-background-size:cover;
-background-position:center;
-}
-
-.albumImg{
-flex-direction:column;
-justify-content:center;
-align-items:center;
-width:500px;
-filter:blur(5px);
-transition:0.3s;
-cursor: url("img/cursor_link.png"), pointer;
-}
-
-.albumImg:hover{
-filter:blur(0px);
-}
-
-.merchCenter{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:100px;
-}
-
-.merchCenter img{
-width:600px;
-cursor: url("img/cursor_link.png"), pointer;
-transition:0.3s;
-}
-
-.merchCenter img:hover{
-transform:scale(1.1);
-}
-
-.album-page{
-background:url("img/wallpaper\ 2.jpg");
-background-size:cover;
-background-position:center;
-align-items:center;
-}
-.merch-page{
-background:url("img/bg3.jpg");
-background-size:cover;
-background-position:center;
-}
-
-.miigui-page{
-background:url("img/wallpaper\ 2.jpg");
-background-size:cover;
-background-position:center;
-align-items:center;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px){
-.center{
-padding:20px;
-text-align:center;
-}
-
-h1{
-font-size:30px;
-}
-
-.logo3d{
-width:50px;
-top:5px;
-left:5px;
-}
-
-.albumImg{
-width:20px;
-}
-
-.merchCenter{
-flex-direction:column;
-gap:40px;
-}
-
-.merchCenter img{
-width:180px;
-}
-}
-
-img{
-max-width:100%;
-}
-
-.center img{
-max-width:80%;
-}
-
-#loading{
-font-size:40px;
-}
-
-button{
-padding:13px 20px;
-font-size:15px;
-font-weight:bold;
-background:black;
-color:white;
-border:none;
-animation:pulse 1.5s infinite;
-box-shadow:
-0 0 10px grey,
-0 0 20px grey;
-}
-
-button:hover{
-transform:scale(1.08);
-background:white;
-color:black;
-box-shadow:
-0 0 20px grey,
-0 0 40px grey;
-}
-@keyframes pulse{
-0%{
-transform:scale(1);
-}
-50%{
-transform:scale(1.05);
-}
-100%{
-transform:scale(1);
-}
-}
-
-.socials{
-position:fixed;
-bottom:10px;
-left:10px;
-
-display:flex;
-gap:10px;
-
-z-index:1000;
-}
-
-.socials img{
-width:30px;
-cursor: url(img/cursor_link.png), pointer;
-transition:0.2s;
-}
-
-.socials img:hover{
-transform:scale(1.2);
-}
-
-@media (max-width:700px){
-.socials img{
-width:25px;
-}
-}
-
-.productPage{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:5vw;
-padding:5vw;
-box-sizing:border-box;
-flex-wrap:wrap;
-}
-
-.productImg{
-flex:1;
-display:flex;
-justify-content:center;
-}
-
-.productImg img{
-max-width:900px;
-width:600px;
-height:600px;
-}
-
-.productInfo{
-flex:1;
-max-width:350px;
-}
-
-.productPage{
-display:flex;
-flex-direction:row;
-}
-
-@media (max-width:900px){
-.productPage{
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-
-.productInfo{
-text-align:center;
-}
-}
-
-/* ALBUM BTN */
-.albumBtn{
-padding:18px 40px;
-font-size:20px;
-font-weight:bold;
-background:white;
-color:black;
-border:none;
-animation:pulse 1.5s infinite;
-box-shadow:
-0 0 10px white,
-0 0 20px white;
-}
-
-.albumBtn:hover{
-transform:scale(1.08);
-background:black;
-color:white;
-box-shadow:
-0 0 20px white,
-0 0 40px white;
-}
-@keyframes pulse{
-0%{
-transform:scale(1);
-}
-50%{
-transform:scale(1.05);
-}
-100%{
-transform:scale(1);
-}
-}
-
-.topMenu{
-position:fixed;
-top:15px;
-right:20px;
-display:flex;
-gap:30px;
-font-size:14px;
-letter-spacing:2px;
-z-index:1000;
-}
-
-.topMenu a{
-color:white;
-text-decoration:none;
-cursor: url("img/cursor_link.png"), pointer;
-}
-
-.topMenu a:hover{
-opacity:0.6;
-}
-
-.searchBar{
-position:fixed;
-top:50px;
-right:20px;
-display:none;
-}
-
-.searchBar input{
-padding:8px;
-background:black;
-color:white;
-border:1px solid white;
-}
-
-img{
-max-width:100%;
-height:auto;
-}
-
-.productImg img{
-max-width:600px;
-width:100%;
-}
-
-@media (max-width:1200px){
-.topMenu{
-gap:15px;
-font-size:12px;
-}
-}
-
-@media (max-height:800px){
-.productPage{
-margin-top:80px;
-}
-.logo3d{
-width:70px;
-}
-}
-
-*{
-box-sizing:border-box;
-}
-
-/* ========================= */
-/* INTRO OPiUM */
-/* ========================= */
-
-#introScreen{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:black;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-z-index:999999;
-animation:introFade 4.5s forwards;
-}
-
-/* overlay noise */
-.introOverlay{
-position:absolute;
-width:100%;
-height:100%;
-
-background:
-url("https://grainy-gradients.vercel.app/noise.svg");
-opacity:0.08;
-pointer-events:none;
-}
-
-/* logo */
-.introLogo{
-width:min(220px, 50vw);
-z-index:2;
-animation:
-logoZoom 4s ease,
-logoFlicker 0.2s infinite;
-filter:
-brightness(1.2)
-contrast(1.3);
-}
-
-/* text */
-.introText{
-margin-top:20px;
-font-size:clamp(22px, 3vw, 40px);
-letter-spacing:12px;
-font-weight:900;
-color:grey;
-opacity:0;
-z-index:2;
-font-family:'Orbitron', sans-serif;
-animation:
-textAppear 2s forwards 1s,
-logoFlicker 0.15s infinite;
-}
-
-/* fade */
-@keyframes introFade{
-0%{
-opacity:1;
-}
-85%{
-opacity:1;
-}
-100%{
-opacity:0;
-visibility:hidden;
-}
-}
-
-/* zoom */
-@keyframes logoZoom{
-0%{
-transform:scale(0.6);
-opacity:0;
-filter:blur(20px);
-}
-40%{
-opacity:1;
-}
-100%{
-transform:scale(1);
-filter:blur(0px);
-}
-}
-
-/* text */
-@keyframes textAppear{
-0%{
-opacity:0;
-letter-spacing:30px;
-}
-100%{
-opacity:1;
-letter-spacing:12px;
-}
-}
-
-/* glitch flicker */
-@keyframes logoFlicker{
-0%{
-opacity:1;
-}
-50%{
-opacity:0.92;
-}
-52%{
-opacity:0.4;
-}
-54%{
-opacity:1;
-}
-70%{
-opacity:0.95;
-}
-100%{
-opacity:1;
-}
-}
-
-/* MOBILE */
-@media (max-width:900px){
-.logo3d{
-width:55px;
-}
-
-.topMenu{
-gap:15px;
-font-size:12px;
-right:10px;
-}
-
-.introLogo{
-width:160px;
-}
-
-.introText{
-font-size:22px;
-letter-spacing:8px;
-}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255); 
+}
+
+body {
+    background: url("img/bg2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Orbitron', sans-serif;
+}
+
+a, button, img {
+    cursor: url("img/cursor_link.png"), pointer;
+}
+
+/* =========================================
+   CLASSE BASE: LIQUID GLASS (APPLE STYLE)
+   ========================================= */
+.glass-panel {
+    background: rgba(20, 20, 20, 0.45); /* Fundo escuro translúcido */
+    backdrop-filter: blur(15px); /* Desfoque do vidro */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Borda de luz */
+    border-radius: 20px; /* Arredondamento */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* Profundidade */
+    padding: 40px;
+    text-align: center;
+}
+
+/* =========================================
+   MENU TOPO (AGORA COM GLASSMORPHISM)
+   ========================================= */
+.topMenu {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    z-index: 1000;
+    
+    /* Efeito Glass no Menu */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.topMenu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.topMenu a:hover {
+    opacity: 0.6;
+    text-shadow: 0 0 10px white;
+}
+
+/* =========================================
+   ESTRUTURA CENTRAL & PRODUTOS
+   ========================================= */
+.center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.productPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 100px 5vw 5vw 5vw; /* Ajuste para não bater no menu */
+    box-sizing: border-box;
+}
+
+.productImg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productImg img {
+    max-width: 100%; /* Ajuste crucial para o mobile */
+    width: 450px;
+    height: auto;
+    border-radius: 15px; /* Deixa as imagens mais suaves */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.productInfo {
+    flex: 1;
+    max-width: 400px;
+    /* Produto agora tem caixa de vidro */
+    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.merchCenter {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 20px;
+}
+
+.merchCenter img {
+    width: 400px;
+    max-width: 100%;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.merchCenter img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================
+   BOTÕES E INPUTS
+   ========================================= */
+button, .albumBtn {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.1); /* Botão em Glass */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover, .albumBtn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.sizes button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.searchBar {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+.searchBar input {
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    outline: none;
+}
+
+/* =========================================
+   ELEMENTOS GERAIS
+   ========================================= */
+.logo3d {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 80px;
+    z-index: 1000;
+}
+
+.socials {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+    /* Adicionado painel de vidro pros ícones não sumirem no fundo */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socials img {
+    width: 25px;
+    transition: 0.2s;
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    z-index: 9999;
+}
+
+/* Telas Específicas */
+.album-page { background: url("img/wallpaper\ 2.jpg") no-repeat center center fixed; background-size: cover; }
+.merch-page { background: url("img/bg3.jpg") no-repeat center center fixed; background-size: cover; }
+.miigui-page { background: url("img/wallpaper\ 2.jpg") no-repeat center center fixed; background-size: cover; }
+
+.albumImg {
+    border-radius: 15px;
+    filter: blur(5px);
+    transition: 0.4s ease-in-out;
+}
+
+.albumImg:hover {
+    filter: blur(0px);
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+/* =========================================
+   ANIMAÇÃO INTRO (MANTIDA)
+   ========================================= */
+#introScreen{ position:fixed; top:0; left:0; width:100%; height:100vh; background:black; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; z-index:999999; animation:introFade 4.5s forwards; }
+.introOverlay{ position:absolute; width:100%; height:100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity:0.08; pointer-events:none; }
+.introLogo{ width:min(220px, 50vw); z-index:2; animation: logoZoom 4s ease, logoFlicker 0.2s infinite; filter: brightness(1.2) contrast(1.3); }
+.introText{ margin-top:20px; font-size:clamp(22px, 3vw, 40px); letter-spacing:12px; font-weight:900; color:grey; opacity:0; z-index:2; font-family:'Orbitron', sans-serif; animation: textAppear 2s forwards 1s, logoFlicker 0.15s infinite; }
+@keyframes introFade{ 0%{opacity:1;} 85%{opacity:1;} 100%{opacity:0;visibility:hidden;} }
+@keyframes logoZoom{ 0%{transform:scale(0.6);opacity:0;filter:blur(20px);} 40%{opacity:1;} 100%{transform:scale(1);filter:blur(0px);} }
+@keyframes textAppear{ 0%{opacity:0;letter-spacing:30px;} 100%{opacity:1;letter-spacing:12px;} }
+@keyframes logoFlicker{ 0%{opacity:1;} 50%{opacity:0.92;} 52%{opacity:0.4;} 54%{opacity:1;} 70%{opacity:0.95;} 100%{opacity:1;} }
+
+/* =========================================
+   RESPONSIVIDADE: CORREÇÕES PARA MOBILE
+   ========================================= */
+@media (max-width: 900px) {
+    /* Centraliza o menu no topo e não deixa encostar nas bordas */
+    .topMenu {
+        right: 5%;
+        left: 5%;
+        top: 15px;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 15px;
+    }
+    .topMenu a { font-size: 11px; }
+    
+    .searchBar { top: 70px; right: 5%; left: 5%; text-align: center; }
+    
+    .logo3d { width: 50px; top: -100px; /* Esconde logo ou reposiciona para não bugar com o menu mobile */ }
+
+    /* Arruma a página de produtos (Hoodie / T-Shirt) */
+    .productPage {
+        flex-direction: column;
+        padding: 100px 20px 80px 20px; /* Espaço para menu e sociais */
+    }
+    
+    .productInfo { padding: 20px; text-align: center; }
+    
+    .productImg img { width: 100%; max-width: 300px; margin-bottom: 10px; }
+
+    /* Arruma as imagens da merch lado a lado que ficavam feias */
+    .merchCenter { flex-direction: column; gap: 30px; height: auto; padding-top: 100px; padding-bottom: 100px;}
+    .merchCenter img { width: 80%; }
+    
+    .glass-panel { padding: 25px 15px; width: 90%; }
+    
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
 }
